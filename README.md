@@ -1,6 +1,6 @@
 # MangoLab FX Tool
 
-A robust, production-grade Foreign Exchange (FX) conversion microservice designed for AI agents and automated workflows. The tool fetches European Central Bank (ECB) reference exchange rates via [Frankfurter API](https://frankfurter.dev) with high precision, caching, resilient error handling, and strict financial validation.
+A small, production-minded Foreign Exchange (FX) conversion microservice designed for AI agents and automated workflows. The tool fetches European Central Bank (ECB) reference exchange rates via [Frankfurter API](https://frankfurter.dev) with high precision, caching, resilient error handling, and strict financial validation.
 
 ---
 
