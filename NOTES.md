@@ -13,7 +13,7 @@ This document outlines key engineering decisions, future architecture enhancemen
 
 ### High-Precision Decimal Math
 - **Problem**: Standard IEEE-754 floating-point arithmetic introduces rounding drift (e.g., `100.0 * 1.0892` can produce `108.92000000000002`). Premature rounding on small base currencies (like JPY or IDR) leads to compounding errors or zeroed figures.
-- **Decision**: Read upstream rates directly from strings into Python `Decimal` instances (`Decimal(str(rates[target]))`). Compute intermediate results at full precision and quantize the final result to two decimal places using standard financial banker's rounding (`ROUND_HALF_UP`).
+- **Decision**: Read upstream rates directly from strings into Python `Decimal` instances (`Decimal(str(rates[target]))`). Compute intermediate results at full precision and quantize the final result to two decimal places using deterministic commercial rounding (`ROUND_HALF_UP`).
 - **Rationale**: Eliminates precision loss across high-volume conversion pipelines and ensures predictable currency calculations.
 
 ### Strict Input Validation
